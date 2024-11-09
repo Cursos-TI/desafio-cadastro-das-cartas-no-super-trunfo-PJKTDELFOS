@@ -5,17 +5,46 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    printf("começou o desafio, commit 1 commit2, commit 3-teste");
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    return 0;
+ struct CartasSuperTrunfo
+    {   
+        char codigo_carta[5];
+        char estado[50];
+        char cidade[50];
+        struct atributos
+        {
+            double populacao;
+            double area;
+            double pib;
+            int pontos_turisticos;
+        } atributos;  
+    }CartasSuperTrunfo;
+
+    void gerador_cartas(struct CartasSuperTrunfo cartas[],int numero_cartas,int max_num)
+    {
+        int index =0;
+        for (char letra ='A'; letra <='Z' && index < numero_cartas;letra++){
+            for (int num=1;num <=max_num && index <numero_cartas;num++){
+                snprintf(cartas[index].codigo_carta,5,"%c%02d",letra,num);
+                index++;
+            }
+     
+        }
+    }
+
+
+int main() 
+{
+    
 }
+
+// Sugestão: Defina variáveis separadas para cada atributo da cidade.
+// Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+// Cadastro das Cartas:
+// Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
+// Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.   
+// Exibição dos Dados das Cartas:
+// Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
+// Exiba os valores inseridos para cada atributo da cidade, um por linha.
+
+
