@@ -136,8 +136,8 @@ int main() {
 // documentação
 
 // nesta etapa, os dados inicias como população, area,pib, e pontos turisticos foram inseridas, e o programa gera automaticamente o codigo da carta, para evitar cartas duplicadas.
-//basta ao usuario indicar quantos estados, e quantas cidades de cada estado, o programa era calcular o total de cartas e fara os codigos de cada carta automaticamente
-//quando inserir informaçoes como pib, area  usar para os decimais .(ponto) e não ,(virgula)
+//basta ao usuario indicar quantos estados, e quantas cidades de cada estado, o programa que o programa irá calcular o total de cartas e fara os codigos de cada carta automaticamente
+//quando inserir informaçoes como pib, area, usar para os decimais .(ponto) e não ,(virgula)
 // cuidado aonde poe as variaveis, fora da ordem pode dar estouro de pilha, e mais facil por na ordem certa que fazer uma função de alocação dinamica de memoria
 
 
