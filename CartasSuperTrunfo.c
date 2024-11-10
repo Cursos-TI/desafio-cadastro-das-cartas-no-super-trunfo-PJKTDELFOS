@@ -67,8 +67,10 @@
         printf("\n");
         printf("Cartas cadastradas:\n");
         printf("\n");
-
         for (int i=0; i<numero_cartas;i++){
+            printf("\n");
+            printf("===================================================================\n");
+            printf("\n");
             printf("Codigo da Carta %s\n",cartas[i].codigo_carta);
             printf("Estado %s\n",cartas[i].estado);
             printf("Cidade %s\n",cartas[i].cidade);
@@ -76,19 +78,42 @@
             printf("Area %.2f km2 \n",cartas[i].atributos.area);
             printf("Pib %.2f bilhoes de Reais\n",cartas[i].atributos.pib );
             printf("Pontos Turisticos %d\n\n",cartas[i].atributos.pontos_turisticos);
+            printf("\n");
+            printf("===================================================================\n");
+            printf("\n");
 
         }
 
 
     }
 
+
 int main() {
-    int numero_cartas=32;
-    int max_num=4;
+        int numero_cartas;
+        int estados;
+        int cidades;
+
+
+        printf("Digite a quantidade  de estados: ");
+        scanf("%d", &estados);
+        printf("\n");
+
+        printf("Digite  a quantidade de Cidades: ");
+        scanf("%d", &cidades);
+        printf("\n");
+        numero_cartas=estados*cidades;
+
+        if( estados ==1 &&  cidades==1){
+            printf("Sera criada %d carta \n\n",numero_cartas);
+        } else{
+            printf("Serao criadas %d cartas \n\n",numero_cartas);
+        }
+
+
 
     CartasSuperTrunfo cartas[numero_cartas];
 
-    gerador_cartas(cartas,numero_cartas,max_num);
+    gerador_cartas(cartas,numero_cartas,cidades);
 
     entrada_dados(cartas,numero_cartas);
 
@@ -106,6 +131,16 @@ int main() {
 // Exibição dos Dados das Cartas:
 // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
 // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+//LEMBRAR QUE  E PRA USAR ASPAS DUPLAS SEMPRE(" ")
+
+// documentação
+
+// nesta etapa, os dados inicias como população, area,pib, e pontos turisticos foram inseridas, e o programa gera automaticamente o codigo da carta, para evitar cartas duplicadas.
+//basta ao usuario indicar quantos estados, e quantas cidades de cada estado, o programa era calcular o total de cartas e fara os codigos de cada carta automaticamente
+//quando inserir informaçoes como pib, area  usar para os decimais .(ponto) e não ,(virgula)
+// cuidado aonde poe as variaveis, fora da ordem pode dar estouro de pilha, e mais facil por na ordem certa que fazer uma função de alocação dinamica de memoria
+
+
 // feito por Aluno: Albert Pimentel França  / Curso: Ciência da Computação/ Matricula 202405681304
 
 
