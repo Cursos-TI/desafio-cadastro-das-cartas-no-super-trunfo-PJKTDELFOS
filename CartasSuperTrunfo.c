@@ -83,8 +83,8 @@
     }
 
 int main() {
-    int numero_cartas=1;
-    int max_num=1;
+    int numero_cartas=32;
+    int max_num=4;
 
     CartasSuperTrunfo cartas[numero_cartas];
 
