@@ -8,12 +8,12 @@
 
  typedef struct CartasSuperTrunfo
     {
-        char codigo_carta[4];
+        char codigo_carta[5];
         char estado[50];
         char cidade[50];
         struct atributos
         {
-            double populacao;
+            int populacao;
             double area;
             double pib;
             int pontos_turisticos;
@@ -48,7 +48,7 @@
         scanf(" %[^\n]", cartas[i].cidade);
 
         printf("Digite a Populacao: ");
-        scanf(" %lf", &cartas[i].atributos.populacao);
+        scanf(" %d", &cartas[i].atributos.populacao);
 
         printf("Digite a Area (km^2): ");
         scanf("%lf", &cartas[i].atributos.area);
@@ -72,9 +72,9 @@
             printf("Codigo da Carta %s\n",cartas[i].codigo_carta);
             printf("Estado %s\n",cartas[i].estado);
             printf("Cidade %s\n",cartas[i].cidade);
-            printf("Populacao %.2f\n",cartas[i].atributos.populacao);
-            printf("Area %.2f km^2 \n",cartas[i].atributos.area);
-            printf("Pib %.2f\n",cartas[i].atributos.pib);
+            printf("Populacao %d Habitantes\n",cartas[i].atributos.populacao);
+            printf("Area %.2f km2 \n",cartas[i].atributos.area);
+            printf("Pib %.2f bilhoes de Reais\n",cartas[i].atributos.pib );
             printf("Pontos Turisticos %d\n\n",cartas[i].atributos.pontos_turisticos);
 
         }
@@ -83,8 +83,8 @@
     }
 
 int main() {
-    int numero_cartas=32;
-    int max_num=4;
+    int numero_cartas=1;
+    int max_num=1;
 
     CartasSuperTrunfo cartas[numero_cartas];
 
