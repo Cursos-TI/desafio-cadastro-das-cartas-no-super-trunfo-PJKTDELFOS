@@ -265,7 +265,7 @@ int main() {
     {
         printf("Carta Player 1\n");
         exibir_cartas(carta_escolhida1,1);
-         printf("Carta Player 2\n");
+        printf("Carta Player 2\n");
         exibir_cartas(carta_escolhida2,1);
     }else
     {
@@ -304,8 +304,10 @@ int main() {
 // cuidado aonde poe as variaveis, fora da ordem pode dar estouro de pilha, e mais facil por na ordem certa que fazer uma função de alocação dinamica de memoria
 
 // nesta ultima etapa todos os valores sao somados para se chegar ao poder total da carta(super poder) o programa ja faz isso.
-//tambem sera adicionado  a função de comparação para que seja efetivamente jogado o jogo, comparando cartas eseus tributos uma vez que forem criadas
-// atenção no acesso as variaveis, pois sao acessadas atrave de ponteiros, não acessar ponteiros de ponteiros, pois sempre darao nulos(Muito cuidado nessa parte,se for fazer alterações)
+//tambem foi adicionado  a função de comparação para que seja efetivamente jogado o jogo, comparando cartas e seus atributos uma vez que forem criadas,permitindo que os 
+//jogadores possam jogar, comparando atributos.
+// atenção no acesso as variaveis, pois sao acessadas atraves de ponteiros, não acessar ponteiros de ponteiros, pois sempre darao nulos(Muito cuidado 
+//nessa parte,se for fazer alterações)
 
 
 
